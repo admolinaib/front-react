@@ -1,4 +1,5 @@
-import React from 'react'
+import Rect from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -6,11 +7,11 @@ export default function Footer() {
         <footer>
             <div className="footer-content">
                 <p>GitHub Profiles:</p>
-                <a className="btn btn-primary mb-3" href="https://github.com/Dnlbta16">Daniel</a>
-                <a className="btn btn-primary mb-3" href="https://github.com/admolinaib">Daniela</a>
-                <a className="btn btn-primary mb-3" href="https://github.com/tu-perfil3">Pablo</a>
-                <a className="btn btn-primary mb-3" href="https://github.com/Nicolas12-ux">Nicolas</a>
-                <a className="btn btn-primary mb-3" href="https://github.com/vesteim">Yeison</a>
+                <Link className="btn btn-primary mb-3" to="https://github.com/Dnlbta16">Daniel</Link>
+                <Link className="btn btn-primary mb-3" to="https://github.com/admolinaib">Daniela</Link>
+                <Link className="btn btn-primary mb-3" to="https://github.com/tu-perfil3">Pablo</Link>
+                <Link className="btn btn-primary mb-3" to="https://github.com/Nicolas12-ux">Nicolas</Link>
+                <Link className="btn btn-primary mb-3" to="https://github.com/vesteim">Yeison</Link>
             </div>
         </footer>
     </>

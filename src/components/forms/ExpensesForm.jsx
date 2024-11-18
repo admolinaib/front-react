@@ -28,6 +28,7 @@ export default function ExpensesForm() {
     <>
         <div className="d-flex justify-content-center align-items-center min-vh-100">
             <form onSubmit={handleSubmit(onsubmited)} className="d-flex flex-column align-items-center w-50 p-3 rounded shadow-sm bg-purple-transparent">
+
                 <h2>Registra tus Gastos</h2>
                 
                 <div className="mb-3 w-75 p-3 d-flex align-items-center position-relative">

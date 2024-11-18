@@ -45,8 +45,9 @@ export default function CategoriesForm() {
                 <div class="mb-3 w-75 p-3 d-flex align-items-center position-relative">
                     <i class="bx bx-image"></i>
                     <input type="file" {...register("fotoCategoria", {required: true})} class="form-control shadow-sm ms-2" id="full-name" placeholder="Foto:"/>
+
                 </div>   
-                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+                <button type="submit" className="btn btn-primary mb-3">Enviar</button>
             </form>
         </div>
     </>

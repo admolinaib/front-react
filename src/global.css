@@ -93,3 +93,11 @@ nav div .link:hover {
     -webkit-text-fill-color: transparent; 
 }
 
+form div .link:hover {
+    background: linear-gradient(to right, #9b59b6, #3498db); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+

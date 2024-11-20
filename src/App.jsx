@@ -6,22 +6,28 @@ import Income from "./pages/Income"
 import Expenses from "./pages/Expenses"
 import Categories from "./pages/Categories"
 import NotFound from "./pages/NotFound"
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
+import { useState } from "react"
 
 function App() {
 
+  let [isAuthenticated, setIsAuthenticated] = useState(false);
+  let handleLogin = () => {
+    setIsAuthenticated(true);
+  }
 
   return (
     <>
       <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/Register" element={ <Register /> } />
-        <Route path="/Login" element={ <Login /> } />
-        <Route path="/RegisterGoal" element={ <RegisterGoal /> } />
-        <Route path="/Income" element={ <Income /> } />
-        <Route path="/Expenses" element={ <Expenses /> } />
+        <Route path="/Register" element={ isAuthenticated ? <Navigate to="/Home" /> : <Register onLogin={handleLogin} /> } />
+        <Route path="/Login" element={ isAuthenticated ? <Navigate to="/Home" /> : <Login onLogin={handleLogin} /> } />
+        <Route path="/Home" element={ isAuthenticated ? <Home /> : <Navigate to="/Login" /> } />
+        <Route path="/RegisterGoal" element={ isAuthenticated ? <RegisterGoal /> : <Navigate to="/Login" /> } />
+        <Route path="/Income" element={ isAuthenticated ? <Income /> : <Navigate to="/Login" /> } />
+        <Route path="/Expenses" element={ isAuthenticated ? <Expenses /> : <Navigate to="/Login" /> } />
         <Route path="/Categories" element={ <Categories /> } />
         <Route path="/*" element={ <NotFound /> } />
+        <Route path="*" element={ <Login onLogin={handleLogin} /> } />
       </Routes>
     </>
   )

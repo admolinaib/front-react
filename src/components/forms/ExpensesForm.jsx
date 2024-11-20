@@ -1,5 +1,5 @@
 import React from 'react'
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -36,8 +36,8 @@ export default function ExpensesForm() {
                     <input type="text" {...register("descripcion", {required: true})} className="form-control shadow-sm ms-2" id="descripcion" placeholder="Descripción" required/>
                     {errors.descripcion && <p>Ingresa una descripción.</p>}
                 </div>
-                <div className="input-group mb-3 d-flex w-50 ">
-                    <i className="bx bx-category"></i>
+                <div className="mb-3 w-75 p-3 d-flex align-items-center position-relative">
+                    <i className="bx bx-category me-2"></i>
                     <input type="text" {...register("categoria", {required: true})} className="form-control rounded " value={inputValue} onChange={(e)=> setInputValue(e.target.value)} aria-label="Text input with dropdown button" placeholder="Categoría"/>
                     <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Elige Categoría</button>
                     <ul className="dropdown-menu dropdown-menu-end">

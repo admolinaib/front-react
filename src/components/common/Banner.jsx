@@ -11,7 +11,7 @@ export default function Banner() {
                     <div className="carousel-caption d-none d-md-block">
                         <h1>Bienvenido a Nuestra Plataforma</h1>
                         <p>La mejor experiencia para gestionar tus Finanzas</p>
-                        <Link to="/RegisterGoal" className='btn btn-primary btn-lg appointment-btn scrollto'>Ingresa tu Meta de ahorro ahora!</Link>
+                        <Link to="/Expenses" className='btn btn-primary btn-lg appointment-btn scrollto'>Ingresa tus gastos dando click acá!</Link>
                         
                     </div>
                 </div>
@@ -20,15 +20,7 @@ export default function Banner() {
                     <div className="carousel-caption d-none d-md-block">
                         <h1>Optimiza tu Productividad</h1>
                         <p>Organiza y completa tareas eficientemente</p>
-                        <a href="registro.html" className="btn btn-success btn-lg">Empieza Gratis</a>
-                    </div>
-                </div>
-                <div className="carousel-item">
-                    <div className="carousel-caption d-none d-md-block">
-                        <img src="https://img.freepik.com/fotos-premium/perro-pug-anteojos-par-anteojos-sienta-escritorio-computadora-portatil_147933-6117.jpg" className="d-block w-100" alt="Imagen 1"/>
-                        <h1>Colabora con tu Equipo</h1>
-                        <p>Herramientas avanzadas para trabajo en equipo</p>
-                        <a href="registro.html" className="btn btn-warning btn-lg">Descubre Más</a>
+                        <Link to="/Income" className='btn btn-primary btn-lg appointment-btn scrollto'>Digita tus ingresos dando click acá!</Link>
                     </div>
                 </div>
             </div>

@@ -25,8 +25,8 @@ function App() {
         <Route path="/RegisterGoal" element={ isAuthenticated ? <RegisterGoal /> : <Navigate to="/Login" /> } />
         <Route path="/Income" element={ isAuthenticated ? <Income /> : <Navigate to="/Login" /> } />
         <Route path="/Expenses" element={ isAuthenticated ? <Expenses /> : <Navigate to="/Login" /> } />
-        <Route path="/Categories" element={ <Categories /> } />
-        <Route path="/*" element={ <NotFound /> } />
+        <Route path="/Categories" element={ isAuthenticated ? <Categories/> : <Navigate to="/Login" /> } />
+        {/* <Route path="/*" element={ <NotFound /> } /> */}
         <Route path="*" element={ <Login onLogin={handleLogin} /> } />
       </Routes>
     </>

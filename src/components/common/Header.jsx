@@ -7,7 +7,7 @@ export default function Header() {
         <nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
             <div className="nav1">
                 <div><Link to="/" className='link text-white bg-dark appointment-btn scrollto'>Inicio</Link></div>
-                <div><Link to="/RegisterGoal" className='link text-white bg-dark appointment-btn scrollto'>Registrar Meta</Link></div>
+                <div><Link to="/RegisterGoal" className='link text-white bg-dark appointment-btn scrollto'>Registro de Usuario</Link></div>
                 <div><Link to="/Income" className='link text-white bg-dark appointment-btn scrollto'>Ingresos</Link></div>
                 <div><Link to="/Expenses" className='link text-white bg-dark appointment-btn scrollto'>Gastos</Link></div>
                 <div><Link to="/Categories" className='link text-white bg-dark appointment-btn scrollto'>Categorías</Link></div>
